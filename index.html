@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bakery</title>
+    <style>
+        body {
+            background-color: pink;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        /* Header Styling */
+        h1 {
+            text-align: center;
+            color: rgb(255, 0, 212);
+            font-family: 'Lucida Handwriting', cursive;
+            font-size: 46px;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h4 {
+            color: rgb(137, 116, 131);
+            text-align: center;
+            font-family: 'Lucida Handwriting', cursive;
+            font-size: 14px;
+        }
+
+        p {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            background-color: rgb(255, 228, 225);
+            border: 1px solid #000;
+        }
+
+        th {
+            color: rgb(221, 5, 23);
+            font-size: 20px;
+        }
+
+        td {
+            color: rgb(59, 29, 18);
+        }
+
+        td img {
+            width: 50px;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        td img:hover {
+            transform: scale(1.5);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Button Styling */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff0062;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        .scroll-top:hover {
+            background-color: #e60056;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 15px;
+        }
+
+        footer a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="C:\Users\Dell\Downloads\image-removebg-preview.png" alt="Bakery Logo" style="display: block; margin: 20px auto; width: 120px; height: auto; animation: bounce 2s infinite;">
+    <h1>My Bakery</h1>
+    <h4>Baking memories, one treat at a time. 🎉</h4>
+    <p><strong>Welcome to My Bakery</strong>,<br> your neighborhood destination for freshly baked cakes, pastries, and sweet moments.</p>
+    <p>Every item we bake is made with love, care, and the finest ingredients to give you a taste you’ll always remember.<br>Whether it’s a birthday, celebration, or just a craving for something sweet — we’ve got you covered!</p>
+
+    <h3 style="text-align: center; color: #ff0062;">Menu 🍰</h3>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Weight</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td><img src="https://i.pinimg.com/1200x/4b/b2/ce/4bb2ce4e64d140a11a331d560ef9744e.jpg" alt="Chocolate Cake"></td>
+            <td>Chocolate Cake</td>
+            <td>500g</td>
+            <td>200 Rupees</td>
+        </tr>
+        <tr>
+            <td><img src="https://i.pinimg.com/736x/f8/60/e4/f860e4243928ba4d25230c0642102dde.jpg" alt="Vanilla Cake"></td>
+            <td>Vanilla Cake</td>
+            <td>500g</td>
+            <td>250 Rupees</td>
+        </tr>
+        <tr>
+            <td><img src="https://i.pinimg.com/736x/f2/f5/02/f2f5020d5fb1a006529a8c60a9f7a4bc.jpg" alt="Red Velvet Cake"></td>
+            <td>Red Velvet Cake</td>
+            <td>600g</td>
+            <td>300 Rupees</td>
+        </tr>
+        <tr>
+            <td><img src="https://i.pinimg.com/1200x/c6/bd/74/c6bd749cfdad355b85d3d5d69d8d16fb.jpg" alt="Blueberry Muffin"></td>
+            <td>Blueberry Muffin</td>
+            <td>150g</td>
+            <td>100 Rupees</td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>📍 Visit us at 123 Baker Street, Sweet City, Bombay.<br>Contact us at (+91) 1234567890 | email: bakery@mybakery.com</p>
+        <p>Follow us on <a href="https://www.instagram.com/mybakery" target="_blank">Instagram</a> | <a href="https://www.facebook.com/mybakery" target="_blank">Facebook</a> | <a href="https://www.twitter.com/mybakery" target="_blank">Twitter</a></p>
+        <p>© 2025 My Bakery. Made for Fun 👻👻.</p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn">⬆</button>
+
+    <script>
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        };
+
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
